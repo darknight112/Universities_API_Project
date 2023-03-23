@@ -101,9 +101,11 @@ public class dbInsert {
 		
 	}
 
-	public void createDb(String dbName) {
+	public void createDb(String dbName) throws Exception {
 //		DatabaseManager();
 	    try {
+	    	Class.forName(DRIVER_CLASS);
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
 	        // create database if it does not already exist
 	        conn.createStatement().execute("IF NOT EXISTS (SELECT * FROM sys.databases WHERE name ="+ dbName+") CREATE DATABASE"+dbName);
 	        conn.createStatement().execute("USE " + dbName);

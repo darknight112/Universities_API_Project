@@ -55,7 +55,12 @@ public class Main {
 			case "1":
 				System.out.println("Enter the name of the database you want to create");
 				String dbName = sc.nextLine();
-				db.createDb(dbName);
+				try {
+					db.createDb(dbName);
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				break;
 			case "2":
 				db.backup();

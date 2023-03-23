@@ -1,14 +1,15 @@
 import java.util.Arrays;
+import java.util.List;
 
 public class MyObject {
-	String domains [];
+	List<String> domains;
 	String country;
-	String web_pages[];
+	List<String> web_pages;
 	String name;
 	String alpha_two_code;
 	String state;
-	public MyObject(String name1,String country1,String alpha_two_code1,String state1, String domains1[] ,
-			String	web_pages1[]) {
+	public MyObject(String name1,String country1,String alpha_two_code1,String state1, List<String> domains1 ,
+			List<String> web_pages1) {
 		this.name=name1;
 		this.country=country1;
 		this.alpha_two_code=alpha_two_code1;
@@ -24,24 +25,31 @@ public class MyObject {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public String[] getDomains() {
+	
+	
+	public List<String> getDomains() {
 		return domains;
 	}
-	public void setDomains(String[] domains) {
+
+	public void setDomains(List<String> domains) {
 		this.domains = domains;
 	}
+
+	public List<String> getWeb_pages() {
+		return web_pages;
+	}
+
+	public void setWeb_pages(List<String> web_pages) {
+		this.web_pages = web_pages;
+	}
+
 	public String getCountry() {
 		return country;
 	}
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public String[] getWeb_pages() {
-		return web_pages;
-	}
-	public void setWeb_pages(String[] web_pages) {
-		this.web_pages = web_pages;
-	}
+
 	public String getName() {
 		return name;
 	}
